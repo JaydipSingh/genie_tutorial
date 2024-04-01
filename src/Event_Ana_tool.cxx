@@ -91,7 +91,7 @@ int main(int argc, char ** argv)
 // the hit nucleon may not be defined
 // (eg. for coherent, or ve- events)
 //
-      //     if(!nuc) return 0;
+      //     if(!nuc) return 0;  // comment/uncomment in COH process is required for your analysis
 
     
           double M = .938;
