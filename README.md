@@ -18,18 +18,18 @@ References:<br />
   > Note: Start by installing Apptainer in your Ubuntu and just follow the doc : 
 
  
-      apptainer build --sandbox Fedora40 docker://fedora:40 
+  apptainer build --sandbox Fedora40 docker://fedora:40 
 
 
 
 Note: Use this command to build the Sandbox, once the sandbox is built use the shell command to open the sandbox[S].  
 
-     apptainer shell --writable --fakeroot Fedora40/
+   apptainer shell --writable --fakeroot Fedora40/
 
 
 Note: In case you want to delete your sandbox : 
     
-       chmod -R +rw Fedora40 && rm -rf Fedora40
+    chmod -R +rw Fedora40 && rm -rf Fedora40
 
 Install all these packages needed for root:
  
