@@ -2,7 +2,6 @@
 
 
 #References:
-
       1) GENIE Installation: https://hep.ph.liv.ac.uk/~costasa/genie/get_started.html
       2)  GENIE development: http://releases.genie-mc.org/
       3)  GENIE User guide: https://genie-docdb.pp.rl.ac.uk/cgi-bin/ShowDocument?docid=2
@@ -19,9 +18,9 @@
 
 
 Note: Start by installing Apptainer in your Ubuntu and just follow the doc : 
-
  
 apptainer build --sandbox Fedora40 docker://fedora:40 
+
 
 Note: Use this command to build the Sandbox, once the sandbox is built use the shell command to open the sandbox[S].  
 
