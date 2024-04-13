@@ -14,10 +14,11 @@ References:<br />
 <li>Line 1</li>
 <li>Line 2</li>
 </ul>
-Note: Start by installing Apptainer in your Ubuntu and just follow the doc : 
+
+  > Note: Start by installing Apptainer in your Ubuntu and just follow the doc : 
 
  
-> apptainer build --sandbox Fedora40 docker://fedora:40 
+                apptainer build --sandbox Fedora40 docker://fedora:40 
 
 
 
