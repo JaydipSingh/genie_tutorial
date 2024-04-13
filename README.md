@@ -1,4 +1,4 @@
-# genie_tutorial NEUTRINO-SCHOOL ICTP-India - 2024 
+# Neutrino-School-2024, ICTP-Banglore, India 
 
 
 References:
