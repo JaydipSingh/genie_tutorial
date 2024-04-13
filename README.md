@@ -1,7 +1,7 @@
 # Neutrino-School-2024, ICTP-Banglore, India 
 
 
-#References:
+References:<br />
       1) GENIE Installation: https://hep.ph.liv.ac.uk/~costasa/genie/get_started.html
       2)  GENIE development: http://releases.genie-mc.org/
       3)  GENIE User guide: https://genie-docdb.pp.rl.ac.uk/cgi-bin/ShowDocument?docid=2
