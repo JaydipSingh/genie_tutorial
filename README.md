@@ -3,18 +3,12 @@
 
 References:<br />
       1) GENIE Installation: https://hep.ph.liv.ac.uk/~costasa/genie/get_started.html <br />
-      2)  GENIE development: http://releases.genie-mc.org/   <br />
-      3)  GENIE User guide: https://genie-docdb.pp.rl.ac.uk/cgi-bin/ShowDocument?docid=2 <br />
+      2) GENIE development: http://releases.genie-mc.org/   <br />
+      3) GENIE User guide: https://genie-docdb.pp.rl.ac.uk/cgi-bin/ShowDocument?docid=2 <br />
       4)  Recent workshop: https://indico.fnal.gov/event/57388/ <br />
       5) NUSTEC workshop :  https://indico.phys.vt.edu/event/44/timetable/#20210315.detailed <br />
       6) Pythia6 Script : https://github.com/GENIE-MC/Generator/tree/master/src/scripts/build/ext  <br />
-      7) Mac Users can try this method: https://nuwro.github.io/user-guide/getting-started/installation/  <br />
-
-
-     
-
-      
-1: Install singularity: https://singularity-tutorial.github.io/01-installation/
+      7) Install singularity: https://singularity-tutorial.github.io/01-installation/
 
 
 Note: Start by installing Apptainer in your Ubuntu and just follow the doc : 
