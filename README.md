@@ -10,7 +10,10 @@ References:<br />
       6) Pythia6 Script : https://github.com/GENIE-MC/Generator/tree/master/src/scripts/build/ext  <br />
       7) Install singularity: https://singularity-tutorial.github.io/01-installation/
 
-
+<ul>
+<li>Line 1</li>
+<li>Line 2</li>
+</ul>
 Note: Start by installing Apptainer in your Ubuntu and just follow the doc : 
 
  
