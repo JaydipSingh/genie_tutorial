@@ -17,7 +17,7 @@ References:<br />
 Note: Start by installing Apptainer in your Ubuntu and just follow the doc : 
 
  
-apptainer build --sandbox Fedora40 docker://fedora:40 
+> apptainer build --sandbox Fedora40 docker://fedora:40 
 
 
 
