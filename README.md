@@ -54,11 +54,6 @@ https://github.com/GENIE-MC/Generator/blob/master/src/scripts/build/ext/build_py
     chmod  +x build_pythia6.sh 
     ./build_pythia6.sh 
 
-Note : Remove the error with clang ex : fsplit.c:107:10: error: parameter 'argc' was not declare
- :clang -Wno-error=implicit-function-declaration -c fsplit.c
-=> https://www.redhat.com/en/blog/new-warnings-and-errors-clang-16
-
-
 Same for Pythia8 ( optional ):
 
          mkdir /opt/Phythia/Pythia8 && cd /opt/Pythia/Pythia8 
@@ -76,22 +71,21 @@ Installing ROOT :
 ( I always prefer to go with the latest version of root but you can work with your version, check your path very carefully in the arguments, I have off some of the features available in my installation, you can OFF more to save the installation time. @Amit Could you please list more stuff that we do not need now? Fallow from here : https://root.cern/install/build_from_source/  )
 
 
-git clone https://github.com/root-project/root.git
-cd root
-git checkout -b v6-30-00 v6-30-00
+     git clone https://github.com/root-project/root.git
+     cd root
+     git checkout -b v6-30-00 v6-30-00
 
-cd  ..
-
-mkdir  root_build && root_install 
-cd  root_build
-
-
-cmake -DCMAKE_INSTALL_PREFIX=/opt/root_install/ -Dmathmore=ON -Dpythia6=ON -DPYTHIA6_DIR=/opt/Pythia/Pythia6/v6_428/ -DPYTHIA6_INCLUDE_DIR=/opt/Pythia/Pythia6/v6_428/inc/ -DPYTHIA6_LIBRARY=/opt/Pythia/Pythia6/v6_428/lib/libPythia6.so  -Dpythia8=ON -DPYTHIA8_DIR=/opt/Pythia/Pythia8/pythia8/ -DPYTHIA8_INCLUDE_DIR=/opt/Pythia/Pythia8/pythia8/include/ -DPYTHIA8_LIBRARY=/opt/Pythia/Pythia8/pythia8/lib/libpythia8.so -Dxrootd=OFF -Dwebgui=OFF -Dtmva-pymva=OFF -Dtmva=OFF -Dtmva-cpu=OFF /opt/root/
-
-cmake --build . --target install -- -j4 
+     cd  ..
+     mkdir  root_build && root_install 
+     cd  root_build
 
 
-source /opt/root_install/bin/thisroot.sh
+     cmake -DCMAKE_INSTALL_PREFIX=/opt/root_install/ -Dmathmore=ON -Dpythia6=ON -DPYTHIA6_DIR=/opt/Pythia/Pythia6/v6_428/ -DPYTHIA6_INCLUDE_DIR=/opt/Pythia/Pythia6/v6_428/inc/ -DPYTHIA6_LIBRARY=/opt/Pythia/Pythia6/v6_428/lib/libPythia6.so  -Dpythia8=ON -DPYTHIA8_DIR=/opt/Pythia/Pythia8/pythia8/ -DPYTHIA8_INCLUDE_DIR=/opt/Pythia/Pythia8/pythia8/include/ -DPYTHIA8_LIBRARY=/opt/Pythia/Pythia8/pythia8/lib/libpythia8.so -Dxrootd=OFF -Dwebgui=OFF -Dtmva-pymva=OFF -Dtmva=OFF -Dtmva-cpu=OFF /opt/root/
+
+      cmake --build . --target install -- -j4 
+
+
+      source /opt/root_install/bin/thisroot.sh
  
 
 Log4 cpp Installation : 
