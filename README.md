@@ -1,4 +1,4 @@
-# genie_tutorial
+# genie_tutorial NEUTRINO-SCHOOL ICTP-India - 2024 
 
 
 References:
