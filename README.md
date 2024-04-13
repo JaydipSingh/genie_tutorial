@@ -25,7 +25,8 @@ apptainer shell --writable --fakeroot Fedora40/
 Note: In case you want to delete your sandbox : 
 chmod -R +rw Fedora40 && rm -rf Fedora40
 
-Install all these packages needed for root : 
+Install all these packages needed for root:
+ 
 
 yum install git make cmake gcc-c++ gcc binutils xrootd-client-devel.x86_64 \ root-net-davix.x86_64 libX11-devel libXpm-devel libXft-devel libXext-devel python \
 mesa-libGL-devel mesa-libGLU-devel glew-devel ftgl-devel mysql-devel \
@@ -33,6 +34,7 @@ fftw-devel cfitsio-devel graphviz-devel libuuid-devel \
 avahi-compat-libdns_sd-devel openldap-devel python-devel python3-numpy \
 libxml2-devel gsl-devel readline-devel qt5-qtwebengine-devel \
 R-devel R-Rcpp-devel R-RInside-devel libnsl2-devel.x86_64 libtool
+
 
 Pythia6 and Pythia8 Installation :
 
