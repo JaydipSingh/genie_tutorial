@@ -18,7 +18,7 @@ References:<br />
   > Note: Start by installing Apptainer in your Ubuntu and just follow the doc : 
 
  
-   apptainer build --sandbox Fedora40 docker://fedora:40 
+    apptainer build --sandbox Fedora40 docker://fedora:40 
 
 
 
@@ -46,13 +46,13 @@ Pythia6 and Pythia8 Installation :
 
 Install everything in /opt/ folder 
 
-mkdir /opt/Phythia/Pythia6 && cd /opt/Pythia/Pythia6
+       mkdir /opt/Phythia/Pythia6 && cd /opt/Pythia/Pythia6
 
 Copy and paste the code from here and install it 
 https://github.com/GENIE-MC/Generator/blob/master/src/scripts/build/ext/build_pythia6.sh
 
-chmod  +x build_pythia6.sh 
-./build_pythia6.sh 
+    chmod  +x build_pythia6.sh 
+    ./build_pythia6.sh 
 
 Note : Remove the error with clang ex : fsplit.c:107:10: error: parameter 'argc' was not declare
  :clang -Wno-error=implicit-function-declaration -c fsplit.c
