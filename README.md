@@ -3,7 +3,9 @@
 
 References:
       1) GENIE Installation: https://hep.ph.liv.ac.uk/~costasa/genie/get_started.html
+
       2)  GENIE development: http://releases.genie-mc.org/
+
       3)  GENIE User guide: https://genie-docdb.pp.rl.ac.uk/cgi-bin/ShowDocument?docid=2
       4)  Recent workshop: https://indico.fnal.gov/event/57388/ 
       5) NUSTEC workshop :  https://indico.phys.vt.edu/event/44/timetable/#20210315.detailed
