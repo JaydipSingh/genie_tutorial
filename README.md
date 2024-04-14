@@ -34,8 +34,7 @@ Install everything in /opt/ folder
 
        mkdir /opt/Phythia/Pythia6 && cd /opt/Pythia/Pythia6
 
-Copy and paste the code from here and install it 
-https://github.com/GENIE-MC/Generator/blob/master/src/scripts/build/ext/build_pythia6.sh
+Copy and paste the code from here to install pythia6 =>https://github.com/GENIE-MC/Generator/blob/master/src/scripts/build/ext/build_pythia6.sh
 
     chmod  +x build_pythia6.sh 
     ./build_pythia6.sh 
