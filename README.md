@@ -80,8 +80,7 @@ https://sourceforge.net/projects/log4cpp/
      make && make install 
 
 
-**Step - 6** Install libxml2 library : 
-
+**Step - 6** Install libxml2 library :  yum install libxml2
 
 **Step - 6** Install LHAPDF library : ( my version LHAPDF-6.5.4 )
 
