@@ -47,24 +47,20 @@ Same for Pythia8 ( optional ):
            tar xvfz pythia8310.tgz
            ln -s pythia8310 pythia8
            cd pythia8310
-           ./configure --prefix=/opt/Pythia/Pythia6 
-      make 
+           ./configure --prefix=/opt/Pythia/Pythia8 
+           make 
 
 
-**Step - 4 CERN ROOT installation** 
-
-( I always prefer to go with the latest version of root but you can work with your version, check your path very carefully in the arguments, I have off some of the features available in my installation, you can OFF more to save the installation time. @Amit Could you please list more stuff that we do not need now? Fallow from here : https://root.cern/install/build_from_source/  )
+**Step - 4 ROOT installation** 
+I always prefer to go with the latest version of root but you can work with your version, check your path very carefully in the arguments. I have disable some of the features available in my installation, you can ON/OFF more to save the installation time.
 
 
      git clone https://github.com/root-project/root.git
      cd root
      git checkout -b v6-30-00 v6-30-00
-
      cd  ..
      mkdir  root_build && root_install 
      cd  root_build
-
-
      cmake -DCMAKE_INSTALL_PREFIX=/opt/root_install/ -Dmathmore=ON -Dpythia6=ON -DPYTHIA6_DIR=/opt/Pythia/Pythia6/v6_428/ -DPYTHIA6_INCLUDE_DIR=/opt/Pythia/Pythia6/v6_428/inc/ -DPYTHIA6_LIBRARY=/opt/Pythia/Pythia6/v6_428/lib/libPythia6.so  -Dpythia8=ON -DPYTHIA8_DIR=/opt/Pythia/Pythia8/pythia8/ -DPYTHIA8_INCLUDE_DIR=/opt/Pythia/Pythia8/pythia8/include/ -DPYTHIA8_LIBRARY=/opt/Pythia/Pythia8/pythia8/lib/libpythia8.so -Dxrootd=OFF -Dwebgui=OFF -Dtmva-pymva=OFF -Dtmva=OFF -Dtmva-cpu=OFF /opt/root/
 
       cmake --build . --target install -- -j4 
