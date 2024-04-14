@@ -151,6 +151,7 @@ source /opt/do_env_R_3_03.sh
       7) Install singularity: https://singularity-tutorial.github.io/01-installation/
 
 
+**Data generation and analysis excercise**
  
 Let’s generate the first set of data : 
 Step 1: Download the Xscetion-generated data from here: https://scisoft.fnal.gov/scisoft/packages/genie_xsec/
