@@ -4,18 +4,12 @@
 
 <ul>
 <li>Schdule of the workshop:  https://www.icts.res.in/event/page/27770</li>
-<li>Line 2</li>
 </ul>
 
-  **Note**: Start by installing Apptainer in your Ubuntu and just follow the doc : 
+  **Step - 1**: Start by installing Apptainer in your linux/windows system and just follow these steps, use build and shell command to build and open the container. 
 
  
     apptainer build --sandbox Fedora40 docker://fedora:40 
-
-
-
-Note: Use this command to build the Sandbox, once the sandbox is built use the shell command to open the sandbox[S].  
-
     apptainer shell --writable --fakeroot Fedora40/
 
 
@@ -23,7 +17,7 @@ Note: In case you want to delete your sandbox :
     
      chmod -R +rw Fedora40 && rm -rf Fedora40
 
-Install all these packages needed for root:
+ ** Step - 2 **Install all these packages needed for root:
  
 
     yum install git make cmake gcc-c++ gcc binutils xrootd-client-devel.x86_64 \ root-net-davix.x86_64 libX11-devel libXpm-devel libXft-devel libXext-devel python \
