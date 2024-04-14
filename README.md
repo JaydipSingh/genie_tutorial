@@ -73,11 +73,13 @@ I always prefer to go with the latest version of root but you can work with your
 **Step - 5** Log4 cpp Installation : 
 Install it from here only, download it, and copy-paste it in folder “/opt/Log4cpp”: 
 https://sourceforge.net/projects/log4cpp/
-      mkdir Log4cpp      /// paste and untar the download in this folder 
+     
+     mkdir Log4cpp      /// paste and untar the download in this folder 
      cd log4cpp
      ./autogen.sh
      ./configure –prefix=/opt/Log4cpp/
-     make && make install 
+      make 
+      make install 
 
 
 **Step - 6** Install libxml2 library :  yum install libxml2
@@ -106,40 +108,35 @@ Prepare a script for environment setup :
 vi do_env_R_3_03.sh
 Paste the following code but set your path correctly: 
 
-#!/bin/bash
-echo "Setting GENIE environment variables..."
-export GENIEBASE=/opt
-export GENIE=$GENIEBASE/Generator-R-3_02_00
-export PYTHIA8=$GENIEBASE/Pythia/Pythia8/pythia8/lib
-export PYTHIA6=$GENIEBASE/Pythia/Pythia6/v6_428/lib
-export ROOTSYS=$GENIEBASE/root_install
-export LHAPATH=$GENIEBASE/lhapdf_install
-export LHAPDF_INC=$GENIEBASE/lhapdf_install/include
-export LHAPDF_LIB=$GENIEBASE/lhapdf_install/lib
-export XSECSPLINEDIR=$GENIEBASE/data
-export LD_LIBRARY_PATH=$LHAPDF_LIB:$LD_LIBRARY_PATH
-export LD_LIBRARY_PATH=$PYTHIA8:$LD_LIBRARY_PATH
-export LD_LIBRARY_PATH=$PYTHIA6:$LD_LIBRARY_PATH
-export LD_LIBRARY_PATH=$ROOTSYS/lib:$LD_LIBRARY_PATH
-export LD_LIBRARY_PATH=$GENIE/lib:$LD_LIBRARY_PATH
-export PATH=$GENIE/bin:$ROOTSYS/bin:$PATH
-unset GENIEBASE
+     #!/bin/bash
+     echo "Setting GENIE environment variables..."
+     export GENIEBASE=/opt
+     export GENIE=$GENIEBASE/Generator-R-3_02_00
+     export PYTHIA8=$GENIEBASE/Pythia/Pythia8/pythia8/lib
+     export PYTHIA6=$GENIEBASE/Pythia/Pythia6/v6_428/lib
+     export ROOTSYS=$GENIEBASE/root_install
+     export LHAPATH=$GENIEBASE/lhapdf_install
+     export LHAPDF_INC=$GENIEBASE/lhapdf_install/include
+     export LHAPDF_LIB=$GENIEBASE/lhapdf_install/lib
+     export XSECSPLINEDIR=$GENIEBASE/data
+     export LD_LIBRARY_PATH=$LHAPDF_LIB:$LD_LIBRARY_PATH
+     export LD_LIBRARY_PATH=$PYTHIA8:$LD_LIBRARY_PATH
+     export LD_LIBRARY_PATH=$PYTHIA6:$LD_LIBRARY_PATH
+     export LD_LIBRARY_PATH=$ROOTSYS/lib:$LD_LIBRARY_PATH
+     export LD_LIBRARY_PATH=$GENIE/lib:$LD_LIBRARY_PATH
+     export PATH=$GENIE/bin:$ROOTSYS/bin:$PATH
+     unset GENIEBASE
 
 
 source /opt/do_env_R_3_03.sh
-
-GENIE INSTALLATION :
-
-https://github.com/GENIE-MC/Generator/releases/tag/R-3_02_00
+**Step - 9**GENIE INSTALLATION : We will use this release for this tutorial : https://github.com/GENIE-MC/Generator/releases/tag/R-3_02_00
  
-cd /opt/ 
-wget https://github.com/GENIE-MC/Generator/archive/refs/tags/R-3_02_00.tar.gz
-mkdir /opt/R-3_02_00_build 
-cd into the source folder and configure it now: 
-cd Generator-R-3_02_00
+    cd /opt/ 
+    wget https://github.com/GENIE-MC/Generator/archive/refs/tags/R-3_02_00.tar.gz   // untar it using : tar -zxvf .....
+    mkdir /opt/R-3_02_00_build 
+    cd Generator-R-3_02_00
+    ./configure --prefix=/opt/R-3_02_00_build/ --enable-atmo --enable-pythia8 --enable-lhapdf6 --with-lhapdf6-lib=/opt/lhapdf_install/lib --with-lhapdf6-inc=/opt/lhapdf_install/include --with-log4cpp-inc=/uer/include --with-log4cpp-lib=/usr/lib --with-pythia8-lib=/opt/Pythia/Pythia8/pythia8/lib --with-pythia6-lib=/opt/Pythia/Pythia6/v6_428/lib --with-pythia6-inc=/opt/Pythia/Pythia6/v6_428/inc
 
-
-./configure --prefix=/opt/R-3_02_00_build/ --enable-atmo --enable-pythia8 --enable-lhapdf6 --with-lhapdf6-lib=/opt/lhapdf_install/lib --with-lhapdf6-inc=/opt/lhapdf_install/include --with-log4cpp-inc=/uer/include --with-log4cpp-lib=/usr/lib --with-pythia8-lib=/opt/Pythia/Pythia8/pythia8/lib --with-pythia6-lib=/opt/Pythia/Pythia6/v6_428/lib --with-pythia6-inc=/opt/Pythia/Pythia6/v6_428/inc
 
 
 References:<br />
