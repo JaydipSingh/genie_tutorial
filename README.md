@@ -52,7 +52,7 @@ Same for Pythia8 ( optional ):
       make 
 
 
-**Installing ROOT :** 
+**Step - 4 CERN ROOT installation** 
 
 ( I always prefer to go with the latest version of root but you can work with your version, check your path very carefully in the arguments, I have off some of the features available in my installation, you can OFF more to save the installation time. @Amit Could you please list more stuff that we do not need now? Fallow from here : https://root.cern/install/build_from_source/  )
 
@@ -71,10 +71,14 @@ Same for Pythia8 ( optional ):
       cmake --build . --target install -- -j4 
 
 
+
+
+
+
       source /opt/root_install/bin/thisroot.sh
  
 
-Log4 cpp Installation : 
+**Step - 5** Log4 cpp Installation : 
 
 mkdir /opt/Log4cpp/ 
 
