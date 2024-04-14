@@ -62,8 +62,7 @@ I always prefer to go with the latest version of root but you can work with your
      mkdir  root_build && root_install 
      cd  root_build
      cmake -DCMAKE_INSTALL_PREFIX=/opt/root_install/ -Dmathmore=ON -Dpythia6=ON -DPYTHIA6_DIR=/opt/Pythia/Pythia6/v6_428/ -DPYTHIA6_INCLUDE_DIR=/opt/Pythia/Pythia6/v6_428/inc/ -DPYTHIA6_LIBRARY=/opt/Pythia/Pythia6/v6_428/lib/libPythia6.so  -Dpythia8=ON -DPYTHIA8_DIR=/opt/Pythia/Pythia8/pythia8/ -DPYTHIA8_INCLUDE_DIR=/opt/Pythia/Pythia8/pythia8/include/ -DPYTHIA8_LIBRARY=/opt/Pythia/Pythia8/pythia8/lib/libpythia8.so -Dxrootd=OFF -Dwebgui=OFF -Dtmva-pymva=OFF -Dtmva=OFF -Dtmva-cpu=OFF /opt/root/
-
-      cmake --build . --target install -- -j4 
+    cmake --build . --target install -- -j4 
 
 *Note :* One can verify root installation as fallows.
 
