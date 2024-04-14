@@ -1,14 +1,6 @@
 # Neutrino-School-2024, ICTP-Banglore, India 
 
 
-References:<br />
-      1) GENIE Installation: https://hep.ph.liv.ac.uk/~costasa/genie/get_started.html <br />
-      2) GENIE development: http://releases.genie-mc.org/   <br />
-      3) GENIE User guide: https://genie-docdb.pp.rl.ac.uk/cgi-bin/ShowDocument?docid=2 <br />
-      4)  Recent workshop: https://indico.fnal.gov/event/57388/ <br />
-      5) NUSTEC workshop :  https://indico.phys.vt.edu/event/44/timetable/#20210315.detailed <br />
-      6) Pythia6 Script : https://github.com/GENIE-MC/Generator/tree/master/src/scripts/build/ext  <br />
-      7) Install singularity: https://singularity-tutorial.github.io/01-installation/
 
 <ul>
 <li>Line 1</li>
@@ -170,6 +162,17 @@ cd Generator-R-3_02_00
 
 
 ./configure --prefix=/opt/R-3_02_00_build/ --enable-atmo --enable-pythia8 --enable-lhapdf6 --with-lhapdf6-lib=/opt/lhapdf_install/lib --with-lhapdf6-inc=/opt/lhapdf_install/include --with-log4cpp-inc=/uer/include --with-log4cpp-lib=/usr/lib --with-pythia8-lib=/opt/Pythia/Pythia8/pythia8/lib --with-pythia6-lib=/opt/Pythia/Pythia6/v6_428/lib --with-pythia6-inc=/opt/Pythia/Pythia6/v6_428/inc
+
+
+References:<br />
+      1) GENIE Installation: https://hep.ph.liv.ac.uk/~costasa/genie/get_started.html <br />
+      2) GENIE development: http://releases.genie-mc.org/   <br />
+      3) GENIE User guide: https://genie-docdb.pp.rl.ac.uk/cgi-bin/ShowDocument?docid=2 <br />
+      4)  Recent workshop: https://indico.fnal.gov/event/57388/ <br />
+      5) NUSTEC workshop :  https://indico.phys.vt.edu/event/44/timetable/#20210315.detailed <br />
+      6) Pythia6 Script : https://github.com/GENIE-MC/Generator/tree/master/src/scripts/build/ext  <br />
+      7) Install singularity: https://singularity-tutorial.github.io/01-installation/
+
 
  
 Let’s generate the first set of data : 
