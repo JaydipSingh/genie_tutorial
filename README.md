@@ -1,9 +1,9 @@
-# Neutrino-School-2024, ICTP-Banglore, India 
+# Genie tutorial ICTS-Banglore, India 
 
 
 
 <ul>
-<li>Line 1</li>
+<li>Schdule of the workshop:  https://www.icts.res.in/event/page/27770</li>
 <li>Line 2</li>
 </ul>
 
