@@ -82,7 +82,7 @@ https://sourceforge.net/projects/log4cpp/
 
 **Step - 6** Install libxml2 library :  yum install libxml2
 
-**Step - 6** Install LHAPDF library : ( my version LHAPDF-6.5.4 )
+**Step - 7** Install LHAPDF library : ( my version LHAPDF-6.5.4 )
 
     mkdir LHAPDF
     cd LHAPDF
@@ -94,20 +94,13 @@ https://sourceforge.net/projects/log4cpp/
     make
     make install 
 
-IMPORTANT INFORMATION ABOUT PDF SETS
-LHAPDF no longer bundles PDF set data in the package tarball.
-The sets are instead all stored online at
-  http://lhapdfsets.web.cern.ch/lhapdfsets/current/
-and you should install those that you wish to use into
-  /Users/jdsingh/GENIE/src/LHAPDF/share/LHAPDF
+IMPORTANT INFORMATION ABOUT PDF SETS;LHAPDF no longer bundles PDF set data in the package tarball.
+The sets are instead all stored online at : http://lhapdfsets.web.cern.ch/lhapdfsets/current/, and you should install those that you wish to use into : /Users/jdsingh/GENIE/src/LHAPDF/share/LHAPDF
 The downloadable PDF sets are packaged as tarballs, which
-must be expanded to be used. The simplest way to do this is with
-the 'lhapdf' script, e.g. to install the CT10nlo PDF set:
-  lhapdf install CT10nlo
-The same effect can be achieved manually with, e.g.:
-  wget http://lhapdfsets.web.cern.ch/lhapdfsets/current/CT10nlo.tar.gz -O- | tar xz -C /Users/jdsingh/GENIE/src/LHAPDF/share/LHAPDF
+must be expanded to be used. The simplest way to do this is with the 'lhapdf' script, e.g. to install the CT10nlo PDF set: lhapdf install CT10nlo
+The same effect can be achieved manually with, e.g.: wget http://lhapdfsets.web.cern.ch/lhapdfsets/current/CT10nlo.tar.gz -O- | tar xz -C /Users/jdsingh/GENIE/src/LHAPDF/share/LHAPDF
 
-
+**Step - 8**
 Prepare a script for environment setup : 
 
 vi do_env_R_3_03.sh
