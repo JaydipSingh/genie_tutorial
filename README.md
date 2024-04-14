@@ -152,6 +152,10 @@ source /opt/do_env_R_3_03.sh
 
 
 **Data generation and analysis excercise**
+ First, open the Sandbox with the shell command and do the source to start working with GENIE.
+
+  apptainer shell Fedora40   // noe need to add extra arguments this time ex: --writable --fakeroot
+  source /opt/do_env_R_3_03.sh
  
 Let’s generate the first set of data : 
 Step 1: Download the Xscetion-generated data from here: https://scisoft.fnal.gov/scisoft/packages/genie_xsec/
