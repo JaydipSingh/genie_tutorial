@@ -131,7 +131,7 @@ Paste the following code but set your path correctly:
 source /opt/do_env_R_3_03.sh
 
 
-**Step - 9**GENIE INSTALLATION : We will use this release for this tutorial : https://github.com/GENIE-MC/Generator/releases/tag/R-3_02_00
+**Step - 9** GENIE INSTALLATION : We will use this release for this tutorial : https://github.com/GENIE-MC/Generator/releases/tag/R-3_02_00
  
     cd /opt/ 
     wget https://github.com/GENIE-MC/Generator/archive/refs/tags/R-3_02_00.tar.gz   // untar it using : tar -zxvf .....
@@ -141,7 +141,7 @@ source /opt/do_env_R_3_03.sh
 
 
 
-References:<br />
+**References:**<br />
       1) GENIE Installation: https://hep.ph.liv.ac.uk/~costasa/genie/get_started.html <br />
       2) GENIE development: http://releases.genie-mc.org/   <br />
       3) GENIE User guide: https://genie-docdb.pp.rl.ac.uk/cgi-bin/ShowDocument?docid=2 <br />
