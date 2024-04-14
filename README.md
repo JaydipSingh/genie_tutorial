@@ -65,12 +65,10 @@ I always prefer to go with the latest version of root but you can work with your
 
       cmake --build . --target install -- -j4 
 
+*Note :* One can verify root installation as fallows.
 
-
-
-
-
-      source /opt/root_install/bin/thisroot.sh
+     source /opt/root_install/bin/thisroot.sh
+     root 
  
 
 **Step - 5** Log4 cpp Installation : 
