@@ -71,12 +71,9 @@ I always prefer to go with the latest version of root but you can work with your
  
 
 **Step - 5** Log4 cpp Installation : 
-
-mkdir /opt/Log4cpp/ 
-
 Install it from here only, download it, and copy-paste it in folder “/opt/Log4cpp”: 
 https://sourceforge.net/projects/log4cpp/
-      mkdir /opt/Log4cpp/      /// paste and untar the download in this folder 
+      mkdir Log4cpp      /// paste and untar the download in this folder 
      cd log4cpp
      ./autogen.sh
      ./configure –prefix=/opt/Log4cpp/
@@ -86,19 +83,17 @@ https://sourceforge.net/projects/log4cpp/
 **Step - 6** Install libxml2 library : 
 
 
+**Step - 6** Install LHAPDF library : ( my version LHAPDF-6.5.4 )
 
-Install LHAPDF library : ( my version LHAPDF-6.5.4 )
-
-
-wget https://lhapdf.hepforge.org/downloads/?f=LHAPDF-6.5.4.tar.gz -O LHAPDF-6.5.4.tar.gz
-# ^ or use a web browser to download, which will get the filename correct
-tar xf LHAPDF-6.5.4.tar.gz
-cd LHAPDF-6.5.4
-./configure --prefix=/path/for/installation
-
- This one may have issue with python interface so use this Or 
-
- ./configure --prefix=/opt/lhapdf_install/ --disable-python
+    mkdir LHAPDF
+    cd LHAPDF
+    wget https://lhapdf.hepforge.org/downloads/?f=LHAPDF-6.5.4.tar.gz -O LHAPDF-6.5.4.tar.gz
+    tar xf LHAPDF-6.5.4.tar.gz
+    cd LHAPDF-6.5.4
+    ./configure --prefix=/opt/LHAPDF/    // This one may have issue with python interface so disable-python  
+    ./configure --prefix=/opt/LHAPDF/ --disable-python
+    make
+    make install 
 
 IMPORTANT INFORMATION ABOUT PDF SETS
 LHAPDF no longer bundles PDF set data in the package tarball.
