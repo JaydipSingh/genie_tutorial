@@ -7,7 +7,7 @@
 <li>Line 2</li>
 </ul>
 
-  > Note: Start by installing Apptainer in your Ubuntu and just follow the doc : 
+  **Note**: Start by installing Apptainer in your Ubuntu and just follow the doc : 
 
  
     apptainer build --sandbox Fedora40 docker://fedora:40 
@@ -34,7 +34,7 @@ Install all these packages needed for root:
     R-devel R-Rcpp-devel R-RInside-devel libnsl2-devel.x86_64 libtool
 
 
-Pythia6 and Pythia8 Installation :
+**Pythia6 and Pythia8 Installation :**
 
 Install everything in /opt/ folder 
 
@@ -58,7 +58,7 @@ Same for Pythia8 ( optional ):
       make 
 
 
-Installing ROOT : 
+**Installing ROOT :** 
 
 ( I always prefer to go with the latest version of root but you can work with your version, check your path very carefully in the arguments, I have off some of the features available in my installation, you can OFF more to save the installation time. @Amit Could you please list more stuff that we do not need now? Fallow from here : https://root.cern/install/build_from_source/  )
 
