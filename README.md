@@ -76,13 +76,14 @@ mkdir /opt/Log4cpp/
 
 Install it from here only, download it, and copy-paste it in folder “/opt/Log4cpp”: 
 https://sourceforge.net/projects/log4cpp/
-  cd log4cpp
- ./autogen.sh
-./configure –prefix=/opt/Log4cpp/
-make && make install 
+      mkdir /opt/Log4cpp/      /// paste and untar the download in this folder 
+     cd log4cpp
+     ./autogen.sh
+     ./configure –prefix=/opt/Log4cpp/
+     make && make install 
 
 
-Install libxml2 library : 
+**Step - 6** Install libxml2 library : 
 
 
 
