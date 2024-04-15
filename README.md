@@ -105,7 +105,7 @@ The same effect can be achieved manually with, e.g.: wget http://lhapdfsets.web.
 **Step - 8**
 Prepare a script for environment setup : 
 
-vi do_env_R_3_03.sh
+vi do_env_R_3_02.sh
 Paste the following code but set your path correctly: 
 
      #!/bin/bash
@@ -118,17 +118,20 @@ Paste the following code but set your path correctly:
      export LHAPATH=$GENIEBASE/lhapdf_install
      export LHAPDF_INC=$GENIEBASE/lhapdf_install/include
      export LHAPDF_LIB=$GENIEBASE/lhapdf_install/lib
+     export LOG4CPP=$GENIEBASE/Log4cpp/install
+     export PATH=$LOG4CPP/bin:$PATH
      export XSECSPLINEDIR=$GENIEBASE/data
      export LD_LIBRARY_PATH=$LHAPDF_LIB:$LD_LIBRARY_PATH
+     export LD_LIBRARY_PATH=$LOG4CPP/lib:$LD_LIBRARY_PATH
      export LD_LIBRARY_PATH=$PYTHIA8:$LD_LIBRARY_PATH
      export LD_LIBRARY_PATH=$PYTHIA6:$LD_LIBRARY_PATH
      export LD_LIBRARY_PATH=$ROOTSYS/lib:$LD_LIBRARY_PATH
      export LD_LIBRARY_PATH=$GENIE/lib:$LD_LIBRARY_PATH
      export PATH=$GENIE/bin:$ROOTSYS/bin:$PATH
      unset GENIEBASE
+     
 
-
-source /opt/do_env_R_3_03.sh
+source /opt/do_env_R_3_02.sh
 
 
 **Step - 9** GENIE INSTALLATION : We will use this release for this tutorial : https://github.com/GENIE-MC/Generator/releases/tag/R-3_02_00
