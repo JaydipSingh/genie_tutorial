@@ -20,7 +20,7 @@ Note: In case you want to delete your sandbox :
  **Step - 2**  The lists the prerequisite packages that need to be installed to be able to configure, build and run ROOT.
  
 
-    yum install git make cmake gcc-c++ gcc binutils xrootd-client-devel.x86_64 \ root-net-davix.x86_64 libX11-devel libXpm-devel libXft-devel libXext-devel python \
+    yum install git make cmake gcc-c++ gcc binutils xrootd-client-devel.x86_64 root-net-davix.x86_64 libX11-devel libXpm-devel libXft-devel libXext-devel python \
     mesa-libGL-devel mesa-libGLU-devel glew-devel ftgl-devel mysql-devel \
     fftw-devel cfitsio-devel graphviz-devel libuuid-devel \
     avahi-compat-libdns_sd-devel openldap-devel python-devel python3-numpy \
