@@ -31,7 +31,9 @@ Note: In case you want to delete your sandbox :
 **Step - 3 : Pythia6 and Pythia8 Installation**
 
 Install everything in /opt/ folder 
-       cd /opt/
+       
+
+      cd /opt/
        mkdir Phythia && cd Pythia
        mkdir Pythia6 && cd Pythia6 
 
