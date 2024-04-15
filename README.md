@@ -44,7 +44,8 @@ Copy and paste the code from here to install pythia6 =>https://github.com/GENIE-
 
 Same for Pythia8 ( optional ):
 
-         mkdir /opt/Phythia/Pythia8 && cd /opt/Pythia/Pythia8 
+         cd /opt/Pythia/ 
+         mkdir Pythia8 && cd Pythia8 
 
           curl -o pythia8310.tgz https://pythia.org/download/pythia83/pythia8310.tgz
            tar xvfz pythia8310.tgz
