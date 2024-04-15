@@ -31,8 +31,9 @@ Note: In case you want to delete your sandbox :
 **Step - 3 : Pythia6 and Pythia8 Installation**
 
 Install everything in /opt/ folder 
-
-       mkdir /opt/Phythia/Pythia6 && cd /opt/Pythia/Pythia6
+       cd /opt/
+       mkdir Phythia && cd Pythia
+       mkdir Pythia6 && cd Pythia6 
 
 Copy and paste the code from here to install pythia6 =>https://github.com/GENIE-MC/Generator/blob/master/src/scripts/build/ext/build_pythia6.sh
 
