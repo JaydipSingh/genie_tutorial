@@ -151,7 +151,7 @@ source /opt/do_env_R_3_02.sh
     mkdir /opt/R-3_02_00_build 
     cd Generator-R-3_02_00
     ./configure --prefix=/opt/R-3_02_00_build/ --enable-atmo --enable-pythia8 --enable-lhapdf6 --with-lhapdf6-lib=/opt/LHAPDF/lib --with-lhapdf6-inc=/opt/LHAPDF/include --with-log4cpp-inc=/opt/Log4cpp/include --with-log4cpp-lib=/opt/Log4cpp/lib --with-pythia8-lib=/opt/Pythia/Pythia8/pythia8/lib --with-pythia6-lib=/opt/Pythia/Pythia6/v6_428/lib --with-pythia6-inc=/opt/Pythia/Pythia6/v6_428/inc
-
+    make && make install 
 
 
 **References:**<br />
