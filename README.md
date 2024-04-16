@@ -119,9 +119,9 @@ vi do_env_R_3_02.sh
 Paste the following code but set your path correctly: 
 
 
-     echo "Setting GENIE environment variables..."
+       echo "Setting GENIE environment variables..."
 
-export WORKDIR=/opt # !!!
+       export WORKDIR=/opt # !!!
 
       #genie
       export GENIE=${WORKDIR}/Generator-R-3_02_00
