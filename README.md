@@ -8,7 +8,7 @@
 
 Clone the Working directory and codes for tutorial session:   
 
-   git clone https://github.com/JaydipSingh/genie_tutorial.git
+      git clone https://github.com/JaydipSingh/genie_tutorial.git
 
   **Step - 1**: Start by installing Apptainer in your linux/windows system and just follow these steps, use build and shell command to build and open the container. 
 
@@ -29,7 +29,7 @@ Note: In case you want to delete your sandbox :
     fftw-devel cfitsio-devel graphviz-devel libuuid-devel \
     avahi-compat-libdns_sd-devel openldap-devel python-devel python3-numpy \
     libxml2-devel gsl-devel readline-devel qt5-qtwebengine-devel \
-    R-devel R-Rcpp-devel R-RInside-devel libnsl2-devel.x86_64 libtool
+    R-devel R-Rcpp-devel R-RInside-devel libnsl2-devel.x86_64 libtool davix-devel
 
 
 **Step - 3 : Pythia6 and Pythia8 Installation**
