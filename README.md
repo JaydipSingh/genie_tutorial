@@ -67,7 +67,7 @@ I always prefer to go with the latest version of root but you can work with your
      cd root
      git checkout -b v6-30-00 v6-30-00
      cd  ..
-     mkdir  root_build && root_install 
+     mkdir  root_build root_install 
      cd  root_build
      cmake -DCMAKE_INSTALL_PREFIX=/opt/root_install/ -Dmathmore=ON -Dpythia6=ON -DPYTHIA6_DIR=/opt/Pythia/Pythia6/v6_428/ -DPYTHIA6_INCLUDE_DIR=/opt/Pythia/Pythia6/v6_428/inc/ -DPYTHIA6_LIBRARY=/opt/Pythia/Pythia6/v6_428/lib/libPythia6.so  -Dpythia8=ON -DPYTHIA8_DIR=/opt/Pythia/Pythia8/pythia8/ -DPYTHIA8_INCLUDE_DIR=/opt/Pythia/Pythia8/pythia8/include/ -DPYTHIA8_LIBRARY=/opt/Pythia/Pythia8/pythia8/lib/libpythia8.so -Dxrootd=OFF -Dwebgui=OFF -Dtmva-pymva=OFF -Dtmva=OFF -Dtmva-cpu=OFF /opt/root/
     cmake --build . --target install -- -j4 
@@ -108,7 +108,9 @@ IMPORTANT INFORMATION ABOUT PDF SETS;LHAPDF no longer bundles PDF set data in th
 The sets are instead all stored online at : http://lhapdfsets.web.cern.ch/lhapdfsets/current/, and you should install those that you wish to use into : /Users/jdsingh/GENIE/src/LHAPDF/share/LHAPDF
 The downloadable PDF sets are packaged as tarballs, which
 must be expanded to be used. The simplest way to do this is with the 'lhapdf' script, e.g. to install the CT10nlo PDF set: lhapdf install CT10nlo
-The same effect can be achieved manually with, e.g.: wget http://lhapdfsets.web.cern.ch/lhapdfsets/current/CT10nlo.tar.gz -O- | tar xz -C /Users/jdsingh/GENIE/src/LHAPDF/share/LHAPDF
+The same effect can be achieved manually with, e.g.: 
+
+    wget http://lhapdfsets.web.cern.ch/lhapdfsets/current/CT10nlo.tar.gz -O- | tar xz -C /opt/LHAPDF/share/LHAPDF
 
 **Step - 8**
 Prepare a script for environment setup : 
