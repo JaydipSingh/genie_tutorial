@@ -6,6 +6,8 @@
 <li>Schdule of the workshop:  https://www.icts.res.in/event/page/27770</li>
 </ul>
 
+  git clone https://github.com/JaydipSingh/genie_tutorial.git
+
   **Step - 1**: Start by installing Apptainer in your linux/windows system and just follow these steps, use build and shell command to build and open the container. 
 
  
