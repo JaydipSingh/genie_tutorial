@@ -20,7 +20,7 @@ Note: In case you want to delete your sandbox :
     
      chmod -R +rw Fedora40 && rm -rf Fedora40
 
- **Step - 2**  The lists the prerequisite packages that need to be installed to be able to configure, build and run ROOT.
+ **Step - 2**  The lists the prerequisite packages that need to be installed to be able to configure, build and run ROOT. You can install these packages from anywhere not dependent on folder label. 
  
 
     yum install git make cmake gcc-c++ gcc binutils xrootd-client-devel.x86_64 root-net-davix.x86_64 libX11-devel libXpm-devel libXft-devel libXext-devel python \
@@ -61,7 +61,7 @@ Same for Pythia8 ( optional ):
 **Step - 4 ROOT installation** 
 I always prefer to go with the latest version of root but you can work with your version, check your path very carefully in the arguments. I have disable some of the features available in my installation, you can ON/OFF more to save the installation time.
 
-
+     cd /opt/ 
      git clone https://github.com/root-project/root.git
      cd root
      git checkout -b v6-30-00 v6-30-00
@@ -81,10 +81,11 @@ I always prefer to go with the latest version of root but you can work with your
 Install it from here only, download it, and copy-paste it in folder “/opt/Log4cpp”: 
 https://sourceforge.net/projects/log4cpp/
      
+     cd /opt/
      mkdir Log4cpp      /// paste and untar the download in this folder 
      cd log4cpp
      ./autogen.sh
-     ./configure –prefix=/opt/Log4cpp/
+     ./configure --prefix=/opt/Log4cpp/
       make 
       make install 
 
@@ -93,6 +94,7 @@ https://sourceforge.net/projects/log4cpp/
 
 **Step - 7** Install LHAPDF library : ( my version LHAPDF-6.5.4 )
 
+    cd /opt/
     mkdir LHAPDF
     cd LHAPDF
     wget https://lhapdf.hepforge.org/downloads/?f=LHAPDF-6.5.4.tar.gz -O LHAPDF-6.5.4.tar.gz
@@ -112,9 +114,11 @@ The same effect can be achieved manually with, e.g.:
     wget http://lhapdfsets.web.cern.ch/lhapdfsets/current/CT10nlo.tar.gz -O- | tar xz -C /opt/LHAPDF/share/LHAPDF
 
 **Step - 8**
-Prepare a script for environment setup : 
+Prepare a script for environment setup :
+ 
+        cd /opt/
+        vi do_env_R_3_02.sh
 
-vi do_env_R_3_02.sh
 Paste the following code but set your path correctly: 
 
 
@@ -152,13 +156,10 @@ Paste the following code but set your path correctly:
         #export PATH=$LIBXML2/bin:$PATH
         #export LD_LIBRARY_PATH=$LIBXML2/lib:$LD_LIBRARY_PATH
 
-
-source /opt/do_env_R_3_02.sh
-
-
 **Step - 9** GENIE INSTALLATION : We will use this release for this tutorial : https://github.com/GENIE-MC/Generator/releases/tag/R-3_02_00
  
-    cd /opt/ 
+    cd /opt/
+    source do_env_R_3_02.sh 
     wget https://github.com/GENIE-MC/Generator/archive/refs/tags/R-3_02_00.tar.gz   // untar it using : tar -zxvf .....
     mkdir /opt/R-3_02_00_build 
     cd Generator-R-3_02_00
