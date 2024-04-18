@@ -37,7 +37,7 @@ Install everything in /opt/ folder
        
 
       cd /opt/
-       mkdir Phythia && cd Pythia
+       mkdir Pythia && cd Pythia
        mkdir Pythia6 && cd Pythia6 
 
 Copy and paste the code from here to install pythia6 =>https://github.com/GENIE-MC/Generator/blob/master/src/scripts/build/ext/build_pythia6.sh
@@ -195,7 +195,7 @@ apptainer shell Fedora40
 source do_env_R_3_02.sh
 *Step (iii)*
 
-  gevgen -r 1 -n 1000 -p 14 -t 1000080160 -e 1 --cross-sections ../XSec_data/gxspl-NUsmall.xml --seed 171872 --event-generator-list CCQE
+  gevgen -r 1 -n 1000 -p 14 -t 1000080160 -e 1 --cross-sections ../XSec_data/gxspl-NUsmall.xml --seed 171872 --event-generator-list CCQE 
   gevdump -f generated_file_name -n 10   // query check the dump data //  
 
 
