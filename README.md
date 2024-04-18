@@ -195,8 +195,8 @@ apptainer shell Fedora40
 source do_env_R_3_02.sh
 *Step (iii)*
 
-  gevgen -r 1 -n 1000 -p 14 -t 1000080160 -e 1 --cross-sections ../XSec_data/gxspl-NUsmall.xml --seed 171872 --event-generator-list CCQE 
-  gevdump -f generated_file_name -n 10   // query check the dump data //  
+       gevgen -r 1 -n 1000 -p 14 -t 1000080160 -e 1 --cross-sections ../XSec_data/gxspl-NUsmall.xml --seed 171872 --event-generator-list CCQE 
+       gevdump -f generated_file_name -n 10   // query check the dump data //  
 
 
 
