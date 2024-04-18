@@ -197,8 +197,6 @@ Keep the file in a folder: genie_tutorial/Xsec_data/
           gevgen -r 2 -n 1000 -p 14 -t 1000010020 -e .2 4.5 -f /opt/flux_files/DUNE-nu-NDFlux.dat --cross-sections XSec_data/gxspl-NUsmall.xml --seed 171872 --event-generator-list CCQE
 
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$   END INSTALLATION AND VALIDATION $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$   END INSTALLATION AND VALIDATION $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$   END INSTALLATION AND VALIDATION $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
    Use this code for your analysis : 
       ./gtestEventLoop -f gntp.1.ghep.root
