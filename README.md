@@ -178,41 +178,27 @@ Paste the following code but set your path correctly:
 
 
 **Data generation and analysis excercise**
- First, open the Sandbox with the shell command and do the source to start working with GENIE.
 
-  apptainer shell Fedora40   // noe need to add extra arguments this time ex: --writable --fakeroot
+*Step (i)* First, open the Sandbox with the shell command and do the source to start working with GENIE.
+
+  apptainer shell Fedora40   // no need to add extra arguments this time ex: --writable --fakeroot
   source /opt/do_env_R_3_03.sh
-
-Let’s generate the first set of data : 
-*Step i* 
-Download the Xscetion-generated data from here: https://scisoft.fnal.gov/scisoft/packages/genie_xsec/
+ 
+*Step (ii)*  Download the Xscetion-generated data from here: https://scisoft.fnal.gov/scisoft/packages/genie_xsec/
 Keep the file in a folder: genie_tutorial/Xsec_data/ 
 
-*Step (ii)*
-Open the Sandbox with the shell command and do the source to start working with GENIE. 
-
-apptainer shell Fedora40
-source do_env_R_3_02.sh
 *Step (iii)*
 
        gevgen -r 1 -n 1000 -p 14 -t 1000080160 -e 1 --cross-sections ../XSec_data/gxspl-NUsmall.xml --seed 171872 --event-generator-list CCQE 
        gevdump -f generated_file_name -n 10   // query check the dump data //  
 
+*Step (iV)* Using neutrino flux file, Ex- DUNE-ND_flux file 
+ 
+          gevgen -r 2 -n 1000 -p 14 -t 1000010020 -e .2 4.5 -f /opt/flux_files/DUNE-nu-NDFlux.dat --cross-sections XSec_data/gxspl-NUsmall.xml --seed 171872 --event-generator-list CCQE
 
-
-gevgen -r 3 -n 100 -p 14 -t 1000010020 -e 1.0 --cross-sections /home/jaydip/GENIE_tutorial/XSec_data/gxspl-NUsmall.xml --seed 171872
-
-Using flux file, Ex- DUNE-ND_flux file 
-gevgen -r 2 -n 1000 -p 14 -t 1000010020 -e .2 4.5 -f /home/jaydip/GENIE_tutorial/flux_files/DUNE-nu-NDFlux.dat --cross-sections /home/jaydip/GENIE_tutorial/XSec_data/gxspl-NUsmall.xml --seed 171872
-
-
-
-The command for printing the event.
-
-  gevdump -f gntp.1.ghep.root
-  
-   gevdump -f gntp.1.ghep.root -n 1,10   //           printing events from 1 to 10 
-    gevdump -f gntp.1.ghep.root -n 1     //  
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$   END INSTALLATION AND VALIDATION $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$   END INSTALLATION AND VALIDATION $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$   END INSTALLATION AND VALIDATION $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
    Use this code for your analysis : 
       ./gtestEventLoop -f gntp.1.ghep.root
