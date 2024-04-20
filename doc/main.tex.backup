@@ -1,0 +1,271 @@
+\documentclass[9pt]{beamer}    % chane text size from here [9pt], or [8pt]
+%
+% Choose how your presentation looks.
+%
+% For more themes, color themes and font themes, see:
+% http://deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html
+%
+\mode<presentation>
+{
+  \usetheme{Madrid}      % or try Darmstadt, Madrid, Warsaw, ...
+  \usecolortheme{beaver} % or try albatross, beaver, crane, ...
+  \usefonttheme{professionalfonts}  % or try serif, structurebold, ...
+  \setbeamertemplate{navigation symbols}{}
+  \setbeamertemplate{caption}[numbered]
+} 
+\setbeamertemplate{bibliography item}[text]  % Command to show reference numbered 
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+%\usepackage{wrapfig}
+\usepackage{graphicx}
+
+
+
+\title[DUNE collaboration meeting ]{Energy reconstruction technique for very high energy muons with DUNE-FD LArTPC.}
+\author{Jaydip Singh}
+%\def\coauthors{Collaboration with Raj Gandhi, Jyotsna Singh, Animesh Chatterjee   }
+%\institute{HRI Allahabad/Lucknow University}
+\institute[] % (optional)
+{University of Lucknow, India \\
+ Working With \\
+ %for the DUNE collaboration.
+ 
+Dr. Thomas R. Junk\\
+FNAL, Batavia, USA \\
+ Dr. Jyotsna Singh\\University of Lucknow, Lucknow, India.\\
+
+}\date{21/01/2020}
+\date[]{May 19, 2021}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage\centering\textbf{DUNE collaboration meeting} \\ 
+  % \textsf{FERMILAB-SLIDES-20-097-LBNF}
+  \begin{figure}[!htb]
+   \begin{minipage}{0.30\textwidth}
+     \centering
+     \includegraphics[width=.40\linewidth]{lkouniv.jpg}
+     
+   \end{minipage}\hfill
+   \begin{minipage}{0.30\textwidth}
+     \centering
+     \includegraphics[width=.40\linewidth]{DUNElogo_color.jpg}
+    
+   \end{minipage}
+\end{figure}
+\end{frame}
+
+\begin{frame}{ Simulation and Reconstruction}
+\begin{itemize}
+ \item Events are generated with a particle gun and simulated using GEANT4 and the LArSoft toolkit. 
+ \item Muons are generated and propagated horizontally and lengthwise of the detector geometry proposed for the single-phase DUNE-FD.
+ \item Angle are uniformly varies from 1 to 11$^{\circ}$ ($\theta_{ xz \& yz }$=6 $\pm$ 5). % _{$\&$ YX }$ =  .
+\item X and Y coordinates are also uniformly varied from -500 to 500 cm while Z is kept fixed at 0.0. 
+ \item 10000 events are generated at each energy value : 100 GeV to 50 TeV.  
+ \item The energy deposited by the track is estimated from drifting ionization charge that is collected by anode wires. 
+ \item Charge on wires is reconstructed as hits. Hits associated between planes allow the reconstruction of three-dimensional space points.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{A high-energy muon in a LArTPC }
+ \hfil\hfil\includegraphics[width=5cm]{10TeVScreenShot4c}\newline
+  \null\hfil\hfil\makebox[5cm]{ X plane }\newline
+  \vfil
+  \hfil\hfil\includegraphics[width=5cm]{10TeVScreenShot5}\hfil\hfil
+    \includegraphics[width=5cm]{10TeVScreenShot6}\newline
+  \null\hfil\hfil\makebox[5cm]{}
+    \hfil\hfil\makebox[5cm]{} \\
+$\rightarrow$ 10 TeV muon event showing a track and associated showers in different APAs.
+\end{frame}
+
+
+\begin{frame}{List of parameters }
+\begin{itemize}
+ \item Several parameters were used\footnotemark by Kevin, to estimate the true muon energy from the observable.
+ \item Out of which only four parameters were found promising, gives strong constrain on true muon moment (ln(p)). 
+ \item Natural logarithm of quantities used to plot histograms on a convenient scale.
+ \item Neyman construction is used for the correlation\footnotemark. 
+\end{itemize}
+  
+
+  \begin{block}{True energy deposition measures (Geant)}
+  
+ 1) Average energy deposition : (Log($\Bar{\Delta}$)) \\
+ 2) RMS of energy deposition :  (Log($\sigma_{\Bar\Delta}$))\\ 
+ 3) Average energy deposition :  ($_{noMIP}$Log($\Bar{\Delta}$))\\ 
+ 4 )RMS of energy deposition  : ($_{noMIP}$Log($\sigma_{\Bar\Delta}$))\\ 
+\end{block}
+
+\begin{block}{Reco energy measures (recob::Hit::Integral())} 
+1) Charge per unit length : (Log($\frac{dQ}{dl})_{full}$) $\rightarrow$ with full track-length. \\
+2) Charge per unit length : (Log($\frac{dQ}{dl})_{small}$) $\rightarrow$ with small track-length( 5m ).
+ \end{block}
+\footnotetext[1]{Kevin Ingles, senior thesis at the University of South Alabama, April - 2018.} 
+\footnotetext[2]{ Jaydip, FD Sim/Reco Workshop : \href{https://indico.fnal.gov/event/45433/}{\beamergotobutton{Sep 18, 2020}}}
+\end{frame}
+
+
+\begin{frame}{Energy deposition of muon }
+
+\begin{figure}
+\includegraphics[width=0.35\textwidth, height=0.35\textheight]{Ave_Energy_MC.pdf}
+ \includegraphics[width=0.35\textwidth, height=0.35\textheight]{RMS_Energy_MC.pdf}\\
+\includegraphics[width=0.35\textwidth, height=0.35\textheight]{Ave_Energy_noMIP_MC.pdf}
+\includegraphics[width=0.35\textwidth, height=0.35\textheight]{RMS_Energy_noMIP_MC.pdf}
+\begin{itemize}
+ \item Histograms for 10 TeV muons events in LArTPC.
+\end{itemize}
+\end{figure}
+\end{frame}
+
+\begin{frame}{dQ/dl with full and small track segments }
+\vspace*{-.4cm}
+\begin{figure}
+%\includegraphics[width=0.35\textwidth, height=0.35\textheight]{MC_dQdl_full_tl_reco_1TeVlog}
+%\includegraphics[width=0.35\textwidth, height=0.35\textheight]{MC_dQdl_small_tl_1TeVlog} \\
+\includegraphics[width=0.35\textwidth, height=0.35\textheight]{MC_dQdl_full_tl_reco_10TeVlog}
+\includegraphics[width=0.35\textwidth, height=0.35\textheight]{MC_dQdl_small_tl_10TeVlog}
+\end{figure}
+\begin{itemize}
+ \item Left and right panel shows the dQ/dl distribution with full track and short track ( L = 5m )respectively for 10 TeV muons events.      
+\end{itemize}
+
+\end{frame}
+
+\begin{frame} { Track length estimation with space points }
+\begin{columns}
+\column{0.6\textwidth}
+\begin{itemize}
+\item Reconstructed spacepoint is an object made using hits in the three 2D time vs wire views associated to find 3D points in LArTPC.
+\item Pandora is used to reconstruct space points\footnotemark.
+\item PCA is used to estimate the direction vector that is used to calculate the equation of line.
+\item Estimated average point and line-plane intersection points are represented with red solid circles. 
+\end{itemize}
+\column{0.6\textwidth}
+\includegraphics[width=.8\textwidth, height=0.6\textheight]{SP_isochroY}
+ \end{columns}
+ \begin{itemize}
+\item \color{red}{Intersecting points of the lines with planes is used to estimate the segment of track (track length) available inside the field cage.}
+ \end{itemize}
+ \footnotetext[3]{Eur. Phys. J. C 75, 439 (2015) and Eur. Phys. J. C 78, 82 (2018) } 
+\end{frame}
+
+\begin{frame}{ Reconstructed tracks length }
+\begin{itemize} 
+\item  Presented reconstructed tracks length with 1 and 10 TeV ( left and right panel ) muons events are shown in the figure. 
+\end{itemize}
+\begin{figure}
+\includegraphics[width=0.40\textwidth, height=0.40\textheight]{MC_true_vs_reco_dl_1TeV}
+\includegraphics[width=0.40\textwidth, height=0.40\textheight]{MC_true_vs_reco_dl_10TeV}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}{ Confidence intervals calculation}
+\begin{figure}
+\includegraphics[width=0.35\textwidth, height=0.35\textheight]{Band_Ave_Energy_MC}
+\includegraphics[width=0.35\textwidth, height=0.35\textheight]{Band_RMS_Energy_MC}\\
+\includegraphics[width=0.35\textwidth, height=0.35\textheight]{Band_Ave_Energy_noMIP_MC}
+\includegraphics[width=0.35\textwidth, height=0.35\textheight]{Band_RMS_Energy_noMIP_MC}
+\begin{itemize}
+\item Feldman-Cousins ordering is used to shade the histograms (68.3$\%$) and make the belts.
+ \end{itemize}
+\end{figure}
+\end{frame}
+
+
+
+\begin{frame}{Confidence interval for dQ/dl }
+\begin{figure}
+\includegraphics[width=0.40\textwidth, height=0.40\textheight]{h_dQdl_Full_FeldmanCousins}
+\includegraphics[width=0.40\textwidth, height=0.40\textheight]{h_dQdl_Small_Neyman}
+\end{figure}
+\begin{itemize}
+ \item Here left and right panel shows the dQ/dl distribution for 10 TeV muon events with confidence intervals (68.3$\%$) for full track and short track ( L = 5m ) respectively.
+ \end{itemize}
+\end{frame}
+
+\begin{frame}{ Neyman construction for the parameters of interest}
+\begin{figure}
+\includegraphics[width=0.35\textwidth, height=0.35\textheight]{Neyman_h_MCWireEnergyAverage28Dec2019}
+\includegraphics[width=0.35\textwidth, height=0.35\textheight]{Neyman_h_MCWireEnergyRMS28Dec2019}\\
+\includegraphics[width=0.35\textwidth, height=0.35\textheight]{Neyman_h_MCAverage_noMIP28Dec2019}
+\includegraphics[width=0.35\textwidth, height=0.35\textheight]{Neyman_h_MCRMS_noMIP28Dec2019}
+\begin{itemize}
+ \item The confidence belts constructed for the 4 variables of interest for full track length events at all energies.
+\end{itemize}
+\end{figure}
+\end{frame}
+
+
+
+
+\begin{frame}{Neyman plot for dQ/dl}
+\begin{figure}
+\includegraphics[width=0.40\textwidth, height=0.40\textheight]{Neyman_h_dQdl_Full20Apr2021}
+\includegraphics[width=0.40\textwidth, height=0.40\textheight]{Neyman_h_dQdl_Small15May2021}
+\end{figure}
+\begin{itemize}
+ \item Here left and right panel shows the Neyman plot for dQ/dl distribution for full track and short track ( L = 5m ) respectively. 
+ \item The confidence belt is constructed by combining all the confidence intervals of the histograms at all the energies (100GeV to 50000GeV).   
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Preco from the Confidence Interval }
+\begin{figure}
+\includegraphics[width=0.6\textwidth, height=0.5\textheight]{Preco_band}
+\begin{itemize}
+ \item preco = exp((A+B)/2).
+ \item Where A is the top of the confidence region in log(p) for a particular muon, and B is the bottom of the confidence region in log(p) for the same muon.
+ \item The suggested value is in the center of the interval.
+\end{itemize}
+\end{figure}
+\end{frame}
+
+\begin{frame}{ Muon momentum resolution}
+\begin{figure}
+\includegraphics[width=0.8\textwidth, height=0.6\textheight]{Reso_fitGauss_10000GeV}
+\begin{itemize}
+ \item Muon momentum resolution for the 4 variables of interest for full track length and 10 TeV energy.
+\end{itemize}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}{ Reconstructed muon momentum resolution with dQ/dl }
+\begin{figure}
+\includegraphics[width=0.40\textwidth, height=0.40\textheight]{Sigma_dqdl_Full_10TeV}
+\includegraphics[width=0.40\textwidth, height=0.40\textheight]{Sigma_dqdl_Small_10TeV}
+\begin{itemize}
+ \item Left panel shows the resolution with full track length and right panel shows the resolution with short track segments ( L = 5m ) for 10 TeV muon events.
+\end{itemize}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Reconstructed muon momentum resolution }
+\begin{figure}
+\includegraphics[width=0.40\textwidth, height=0.40\textheight]{Sigma_plot}
+\includegraphics[width=0.40\textwidth, height=0.40\textheight]{Sigma_plot_with_dqdl_5d}
+\begin{itemize}
+ \item Left panel shows the resolution plots as a function of true muon momentum for the list of parameters presented in previous FD meeting\footnotemark. 
+ \item Right panel shows the resolution plots with the previous list of parameters as well with the dQ/dl variable. 
+ \end{itemize}
+\end{figure}
+ \footnotetext[4]{ Jaydip, FD Simulation and Reconstruction Bi-Weekly : \href{https://indico.fnal.gov/event/46790/}{\beamergotobutton{Dec 14, 2020}}}
+\end{frame}
+
+
+\begin{frame}{\hspace{3.5cm} Future work  }
+\begin{itemize}
+
+ 
+\item Test the algorithm with the cosmic muons events available in protoDUNE data. 
+\item Differentiating upward-going muons from downward-going muons using shower shapes.
+\item Perform the analysis with DL (Deep Learning) algorithms as done by the IceCube collaboration. 
+\item Systematic uncertainty evaluation. (muon radiation modeling, electronics saturation, recombination modeling in dense showers and electron lifetime).
+\end{itemize}
+\end{frame}
+
+
+\end{document}
