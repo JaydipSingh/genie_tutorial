@@ -9,7 +9,7 @@ Clone the Working directory and codes for tutorial session:
 
       git clone https://github.com/JaydipSingh/genie_tutorial.git
 
-  **Step - 1**: Start by installing Apptainer in your linux/windows system and just follow these steps, use build and shell command to build and open the container. 
+  **Step - 1**: Start by installing Apptainer/Singularity container in your linux/windows system and just follow these steps, use build and shell command to build and open the container. 
 
  
     apptainer build --sandbox Fedora40 docker://fedora:40 
