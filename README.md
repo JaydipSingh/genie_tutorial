@@ -187,7 +187,7 @@ Paste the following code but set your path correctly:
 *Step (ii)*  Download the Xscetion-generated data from here: https://scisoft.fnal.gov/scisoft/packages/genie_xsec/
 Keep the file in a folder: genie_tutorial/Xsec_data/ 
 
-*Step (iii)*
+*Step (iii)*   Electorn : 12,-12, Muon : 14, -14, Tau : 16, -16
 
        gevgen -r 1 -n 1000 -p 14 -t 1000080160 -e 1 --cross-sections ../XSec_data/gxspl-NUsmall.xml --seed 171872 --event-generator-list CCQE 
        gevdump -f generated_file_name -n 10   // query check the dump data //  
@@ -196,7 +196,7 @@ Keep the file in a folder: genie_tutorial/Xsec_data/
  
           gevgen -r 2 -n 1000 -p 14 -t 1000010020 -e .2 4.5 -f /opt/flux_files/DUNE-nu-NDFlux.dat --cross-sections XSec_data/gxspl-NUsmall.xml --seed 171872 --event-generator-list CCQE
 
-*Example 1 :* 
+*Example 1 :* Generate events using detector geometry, Ex: ANNIE, DUNE-ND/FD and INO , define your own detector geometry, will be discussed into the GEANT4 session. 
 
      gevgen -r 1 -n 100 -p 14 -g ../gdml/annie_v04.gdml -t 1000080160 -e 1 --cross-sections /home/jaydip/GENIE_tutorial/XSec_data/gxspl-NUsmall.xml --seed 171872 --event-generator-list CCQE 
 
