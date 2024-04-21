@@ -196,6 +196,17 @@ Keep the file in a folder: genie_tutorial/Xsec_data/
  
           gevgen -r 2 -n 1000 -p 14 -t 1000010020 -e .2 4.5 -f /opt/flux_files/DUNE-nu-NDFlux.dat --cross-sections XSec_data/gxspl-NUsmall.xml --seed 171872 --event-generator-list CCQE
 
+*Example 1 :* 
+
+     gevgen -r 1 -n 100 -p 14 -g ../gdml/annie_v04.gdml -t 1000080160 -e 1 --cross-sections /home/jaydip/GENIE_tutorial/XSec_data/gxspl-NUsmall.xml --seed 171872 --event-generator-list CCQE 
+
+
+To use a target mix of 88.79% (weight fraction) O16 and 11.21% H (i.e. ‘water’) type:
+‘-g 1000080160[0.8879],1000010010[0.1121]’
+
+
+     gevgen -r 1 -n 100 -p 14 -g ../gdml/annie_v04.gdml -t 1000080160[0.8879],1000010010[0.1121] -e 1 --cross-sections /home/jaydip/GENIE_tutorial/XSec_data/gxspl-NUsmall.xml --seed 171872 --event-generator-list CCQE
+
 ##$$$$$$$$$$$$   END INSTALLATION AND VALIDATION $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
  Use this code for your analysis : 
