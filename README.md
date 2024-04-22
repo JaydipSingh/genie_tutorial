@@ -177,10 +177,9 @@ Paste the following code but set your path correctly:
       7) Install singularity: https://singularity-tutorial.github.io/01-installation/
 **Particles and Ions code** See Appendix D 
 
-=>Electorn : 12,-12, Muon : 14, -14, Tau : 16, -16
-=>GENIE has adopted the standard PDG (2006) particle codes. For ions it has adopted a PDG extension,
-using the 10-digit code 10LZZZAAAI where AAA is the total baryon number, ZZZ is the total charge, L
-is the number of strange quarks and I is the isomer number (I=0 corresponds to the ground state).
+=>Electorn : 12,-12, Muon : 14, -14, Tau : 16, -16 <br />
+=>GENIE has adopted the standard PDG (2006) particle codes. For ions it has adopted a PDG extension, using the 10-digit code 10LZZZAAAI where AAA is the total baryon number, ZZZ is the total charge, 
+L is the number of strange quarks and I is the isomer number (I=0 corresponds to the ground state). <br />
 So, for example:
 1000010010 → H 1
 1000060120 → C12 :
