@@ -175,7 +175,18 @@ Paste the following code but set your path correctly:
       5) NUSTEC workshop :  https://indico.phys.vt.edu/event/44/timetable/#20210315.detailed <br />
       6) Pythia6 Script : https://github.com/GENIE-MC/Generator/tree/master/src/scripts/build/ext  <br />
       7) Install singularity: https://singularity-tutorial.github.io/01-installation/
+**Particles and Ions code** See Appendix D 
 
+=>Electorn : 12,-12, Muon : 14, -14, Tau : 16, -16
+=>GENIE has adopted the standard PDG (2006) particle codes. For ions it has adopted a PDG extension,
+using the 10-digit code 10LZZZAAAI where AAA is the total baryon number, ZZZ is the total charge, L
+is the number of strange quarks and I is the isomer number (I=0 corresponds to the ground state).
+So, for example:
+1000010010 → H 1
+1000060120 → C12 :
+1000080160 → O16 :
+1000260560 → F e56 :
+and so on.
 
 **Data generation and analysis excercise**
 
