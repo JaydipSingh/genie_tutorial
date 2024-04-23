@@ -52,11 +52,11 @@ int main(int argc, char ** argv)
 
      TCanvas *c1 = new TCanvas("c1", "", 700, 600);
 
-     TH1D *p_mu = new TH1D("p_mu","Muons Momentum",40,0,2); // Event/ 100 MeV Bins 
-     TH1D *p_had = new TH1D("p_had","Hadrons Momentum",40,0,2);
-     TH1D *p_cal = new TH1D("p_cal","Cal-Reco Neutino Energy",40,0,2);
+     TH1D *p_mu = new TH1D("p_mu","Muons Momentum",80,0,4); // Event/ 100 MeV Bins 
+     TH1D *p_had = new TH1D("p_had","Hadrons Momentum",80,0,4);
+     TH1D *p_cal = new TH1D("p_cal","Cal-Reco Neutino Energy",80,0,4);
      TH1D *h_q2 = new TH1D("h_q2","Momentum transfer (Q^{2})",20,0,1); // Event/10 Mev Bins
-     TH1D *h_Erec_ccqe = new TH1D("h_Erec_ccqe","Kin-Reco Neutrino Energy",40,0,2);
+     TH1D *h_Erec_ccqe = new TH1D("h_Erec_ccqe","Kin-Reco Neutrino Energy",80,0,4);
      TH1D *hN_Etrue = new TH1D("hN_Etrue","Neutrons Kinatic Energy",40,0,1);
      TH1D *h_RNeutNu = new TH1D("h_RNeutNu","Fractionl Neutron Energy",100,0,1); 
      TH1D *h_RNHadNu = new TH1D("h_RNHadNu","Fractionl Hadrons Energy",100,0,1);
@@ -88,12 +88,18 @@ int main(int argc, char ** argv)
           GHepParticle * neu = event.Probe();
           GHepParticle * fsl = event.FinalStatePrimaryLepton();
           GHepParticle * nuc = event.HitNucleon();
+          const ProcessInfo & proc = event.Summary()->ProcInfo();     
+ 
+      bool is_dis = proc.IsDeepInelastic();
+      bool is_res = proc.IsResonant();
+      bool is_qel = proc.IsQuasiElastic();
+      bool is_cohpr = proc.IsCoherentProduction();
+      bool is_mec = proc.IsMEC();
+  
 
 // Nu-NuINt_COH :the hit nucleon may not be defined;  ex: for coherent, or ve- events.
      
     //     if(!nuc) return 0;
-          const ProcessInfo & proc = event.Summary()->ProcInfo();
-            if(!proc.IsQuasiElastic()) return 0; 
           double M = .938;
           double phad= 0.0, Erec_ccqe=0.00;
           double pmu= 0.0, ENeutron = 0.00, ENHad = 00;
@@ -141,7 +147,7 @@ int main(int argc, char ** argv)
     }// end loop over particles	
               
 	
-        double Pvis = sqrt((px+pxh)*(px+pxh)+(py+pyh)*(py+pyh)+(pz+pzh)*(pz+pzh)); // hadrons + muon component 
+       double Pvis = sqrt((px+pxh)*(px+pxh)+(py+pyh)*(py+pyh)+(pz+pzh)*(pz+pzh)); // hadrons + muon component 
         double Pcal = sqrt(pxh*pxh+pyh*pyh+pzh*pzh);                               // Only hadronic component  
         double Q2 = 2*Pvis*(sqrt(px*px+py*py+pz*pz)-pz);
         double Ybj= Pcal/Pvis; 
@@ -150,9 +156,9 @@ int main(int argc, char ** argv)
         cout<<"Pcal="<<"\t"<<Pcal<<"\tPvis=\t"<<Pvis<<"\tXbj=\t"<<Xbj<<"\tW2=\t"<<M*M+2*M*(Pvis-pmu)-Q2<<"\tYbj=\t"<<Ybj<<"\tQ2=\t"<<Q2<<"\ts=\t"<<(Q2/(Xbj*Ybj))+M*M<<"\n"; 
        p_mu->Fill(pmu); 
        p_had->Fill(Pcal);
-       p_cal->Fill(Pvis);
+     if(is_res)p_cal->Fill(Pvis);
        h_q2->Fill(Q2);
-       h_Erec_ccqe->Fill(Erec_ccqe);
+     if(is_qel)h_Erec_ccqe->Fill(Erec_ccqe);
       if(ENeutron)hN_Etrue->Fill(ENeutron);
       if(ENeutron) h_RNeutNu->Fill(ENeutron/neu->E());
       if(ENHad)h_RNHadNu->Fill(ENHad/neu->E());
