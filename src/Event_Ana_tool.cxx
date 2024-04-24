@@ -115,19 +115,15 @@ int main(int argc, char ** argv)
 
         //if (p_genie->Pdg() == kPdgPi0 || p_genie->Pdg() == kPdgPiP || p_genie->Pdg() == kPdgPiM)
 	  
-           {   if ( pmc->Pdg() == kPdgMuon || pmc->Pdg() == kPdgAntiMuon){ pmu= pmu + sqrt(pmc->Px()*pmc->Px()+pmc->Py()*pmc->Py()+pmc->Pz()*pmc->Pz());
+           {   if ( (pmc->Pdg() == kPdgMuon || pmc->Pdg() == kPdgAntiMuon) && ((pmc->E()-0.1056)>.350) )
+                                  { pmu= pmu + sqrt(pmc->Px()*pmc->Px()+pmc->Py()*pmc->Py()+pmc->Pz()*pmc->Pz());
 			                                                             pz=pz+pmc->Pz();
 			                                                             py=py+pmc->Py();
 			                                                             px=px+pmc->Px();
                                                                                      Erec_ccqe = (1.81912*pmu+0.0418939)/(2*(0.909-pmu+pz));}
                  else
-		       if ((pmc->Pdg() == kPdgPi0 || pmc->Pdg() == kPdgPiP || pmc->Pdg() == kPdgPiM) ||                                  
-                           ((pmc->Pdg() == kPdgKP || pmc->Pdg() == kPdgKM || pmc->Pdg() == kPdgK0 || pmc->Pdg() == kPdgAntiK0  ||
-                             pmc->Pdg() == kPdgK0L || pmc->Pdg() == kPdgK0S )) || 
-                             (pmc->Pdg() == kPdgProton ) || (pmc->Pdg() == kPdgGamma)||
-                             (pmc->Pdg() == kPdgNeutron))  
-
-  			 {phad= phad + sqrt(pmc->Px()*pmc->Px()+pmc->Py()*pmc->Py()+pmc->Pz()*pmc->Pz());
+                        if (pmc->Pdg() == kPdgPi0 || pmc->Pdg() == kPdgPiP || pmc->Pdg() == kPdgPiM & (pmc->E()-0.1380)>.080)
+                   			 {phad= phad + sqrt(pmc->Px()*pmc->Px()+pmc->Py()*pmc->Py()+pmc->Pz()*pmc->Pz());
 					   pxh=pxh+pmc->Px();
 					   pyh=pyh+pmc->Py();
 					   pzh=pzh+pmc->Pz();
